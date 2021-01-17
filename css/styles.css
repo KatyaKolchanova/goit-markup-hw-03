@@ -39,6 +39,16 @@ button {
   display: none;
 }
 
+/* Общая стилизация*/
+.container {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
 /* Стилизация лого в хедере и футере*/
 .logo {
   font-family: "Raleway", sans-serif;
