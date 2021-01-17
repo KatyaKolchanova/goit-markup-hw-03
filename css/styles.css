@@ -22,7 +22,10 @@ ul {
   padding: 0; 0;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0; 0;
 }
 
@@ -30,6 +33,10 @@ button {
   margin: 0; 0;
   padding: 0; 0;
   border: 0; 0;
+}
+
+.not-active {
+  display: none;
 }
 
 /* Стилизация лого в хедере и футере*/
