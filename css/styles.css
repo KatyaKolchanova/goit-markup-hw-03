@@ -135,7 +135,19 @@ button {
   background-color: var(--dark-bcg-color);
   color: var(--primary-text-color-darkbcg);
 }
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .hero-title {
+  margin-bottom: 30px;
+
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -145,6 +157,10 @@ button {
 }
 
 .hero-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+
   background-color: var(--accent-color);
   color: var(--primary-text-color-darkbcg);
   font-family: "Roboto", sans-serif;
