@@ -59,6 +59,7 @@ button {
 
 .logo.dark {
   color: var(--sub-text-color);
+  margin-right: 93px;
 }
 
 .logo.light {
@@ -70,6 +71,26 @@ button {
 }
 
 /* Стилизация хедера */
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header .links {
+  display: block;
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .links {
   font-weight: 500;
   font-size: 14px;
@@ -79,6 +100,11 @@ button {
 }
 .site-nav .links {
   color: var(--sub-text-color);
+}
+
+.email-link {
+  margin-left: auto;
+  margin-right: 50px;
 }
 
 .links.contacts {
