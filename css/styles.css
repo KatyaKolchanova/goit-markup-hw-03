@@ -7,7 +7,8 @@
   --primary-bcg-color: #ffffff;
   --light-bcg-color: #f5f4fa;
   --dark-bcg-color: #2f303a;
-  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -19,21 +20,24 @@ body {
 
 ul {
   list-style: none;
-  margin: 0; 0;
-  padding: 0; 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
 h2,
 h3,
-p, {
-  margin: 0; 0;
+p {
+  margin: 0;
 }
 
-button {
-  margin: 0; 0;
-  padding: 0; 0;
-  border: 0; 0;
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 73px;
 }
 
 img {
@@ -42,8 +46,15 @@ img {
   height: auto;
 }
 
-.not-active {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  owerflow: hidden;
 }
 
 /* Общая стилизация*/
@@ -63,7 +74,6 @@ img {
 .section-title {
   margin-bottom: 50px;
 }
-
 
 /* Стилизация лого в хедере и футере*/
 .logo {
@@ -91,6 +101,10 @@ img {
 .header .container {
   display: flex;
   align-items: center;
+}
+
+.header .container-secondary {
+  border-bottom: 1px solid #ececec;
 }
 
 .header .links {
@@ -162,8 +176,6 @@ img {
 
 .hero-title {
   margin-bottom: 30px;
-
-
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -172,18 +184,21 @@ img {
   text-transform: uppercase;
 }
 
-.hero-button {
-  width: 200px;
-  height: 50px;
-  border-radius: 4px;
-
+.hero .button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 32px;
+  padding-left: 32px;
   background-color: var(--accent-color);
+  text-align: center;
+
   color: var(--primary-text-color-darkbcg);
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Стилизация секции с преимуществами */
@@ -249,7 +264,7 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
 
-  text-align: center
+  text-align: center;
 }
 
 .team-list .title {
@@ -270,6 +285,11 @@ img {
   padding-bottom: 60px;
 }
 
+.footer .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
 .footer .address {
   font-style: normal;
   font-size: 14px;
@@ -277,7 +297,7 @@ img {
 }
 
 .footer .location {
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 9px;
 }
 
@@ -307,27 +327,76 @@ img {
 }
 
 /* Стилизация страницы Портфолио */
+
 /* Стилизация кнопок */
 .buttons-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.buttons-list .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.buttons-list .button {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 22px;
+  padding-left: 22px;
+  text-align: center;
+
+  background-color: var(--light-bcg-color);
   color: var(--sub-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
 }
 
-.buttons-list .button {
-  background-color: var(--light-bcg-color);
-}
-
 .button:hover,
 .button:focus,
 .button.current {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 22px;
+  padding-left: 22px;
+  text-align: center;
+
   background-color: var(--accent-color);
   color: var(--primary-text-color-darkbcg);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Стилизация секции с работами */
-.work-list .title {
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.work-list .item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.card {
+  border: 1px solid #eeeeee;
+}
+
+.card-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.card-content .title {
+  margin-bottom: 4px;
+
   color: var(--sub-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -335,7 +404,7 @@ img {
   letter-spacing: 0.06em;
 }
 
-.work-list .text {
+.card-content .text {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
