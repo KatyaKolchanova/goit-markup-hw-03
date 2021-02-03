@@ -59,7 +59,7 @@ img {
 
 /* Общая стилизация*/
 .container {
-  width: 1170px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -98,19 +98,19 @@ img {
 
 /* Стилизация хедера */
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header .container {
   display: flex;
   align-items: center;
 }
 
-.header .container-secondary {
-  border-bottom: 1px solid #ececec;
-}
-
 .header .links {
   display: block;
-  padding-top: 52px;
-  padding-bottom: 52px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav-links {
@@ -276,13 +276,10 @@ img {
 
 /* Стилизация футера */
 .footer {
-  background-color: var(--dark-bcg-color);
-  color: var(--primary-text-color-darkbcg);
-}
-
-.footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--dark-bcg-color);
+  color: var(--primary-text-color-darkbcg);
 }
 
 .footer .logo {
